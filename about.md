@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm a digital designer at the Wellcome Trust.
 
-### More Information
+I specialise in design and front end development for email and the web using hand coded semantic HTML, CSS and a dash of Javascript.
 
-A place to include any other types of information that you'd like to include about yourself.
+### Find me at
 
-### Contact me
+[Twitter](https://twitter.com/jackcraig)
 
-[email@domain.com](mailto:email@domain.com)
+[GitHub](https://github.com/jackcraig)
+
+[Instagram](https://instagram.com/jackcraig)
