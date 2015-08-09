@@ -6,7 +6,7 @@
 //
 
 //@import "reset";
-//@import "settings";
+@import "settings";
 @import "variables";
 
 // Syntax highlighting @import is at the bottom of this file
@@ -20,25 +20,44 @@ html {
 }
 
 body {
-	background: $white;
-  font-family: $georgia;
+  font-family: $freight;
+  color: $black;
 }
 
-.container {
+.wrapper {
   margin: 0 auto;
   max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
+  padding: $typecsset-magic-number;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .alpha, h2, .beta, h3, .delta, h4, .gamma, h5, .epsilon, h6, .zeta {
   font-weight: normal;
-  @include mobile {
-  }
+  font-weight: 700;
+}
+
+small, .milli {
+  @include typecsset-font-size(14px);
+}
+
+h1, .alpha {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+
 }
 
 a {
+  color: $black;
+  text-decoration: none;
+  //border-bottom: 2px solid $lightGrey;
+  box-shadow: inset 0 -1px 0 $lightGrey;
+
   &:hover, &:active {
+    color: $black;
+    //border-bottom: 2px solid $grey;
+    box-shadow: inset 0 -1px 0 $grey;
   }
 }
 
@@ -46,7 +65,7 @@ ul, ol {
 }
 
 ul {
-  list-style-type: disc;
+  list-style-type: none;
 }
 
 ol {
@@ -57,7 +76,7 @@ ol ul, ul ol, ul ul, ol ol {
 }
 
 ul ul, ol ul {
-  list-style-type: circle;
+  list-style-type: none;
 }
 
 em, i {
@@ -65,7 +84,7 @@ em, i {
 }
 
 strong, b {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 img {
@@ -94,16 +113,56 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 
+.wrapper {
+    margin-top: $typecsset-magic-number;
+}
+
+
 //
 // .masthead
 //
 
+.masthead {
+  @include desktop {
+    width: 200px;
+    float: left;
+    margin-right: $typecsset-magic-number;
+
+  }
+}
+
+.site-info__title a {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.site-info__links {
+  margin: 0;
+  li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 4px; 
+    @include desktop { 
+      margin: 0;
+      display: block;
+    }
+  }
+}
 
 
 //
 // .main
 //
 
+.main {
+  display: block;
+  overflow: auto;
+}
+
+.date {
+  @extend .milli;
+  font-style: italic;
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

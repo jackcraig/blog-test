@@ -8,32 +8,34 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    <script src="//use.typekit.net/rnw0xzr.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
+    <div class="wrapper">
         <header class="masthead clearfix">
 
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+            <h1 class="site-info__title"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-info__description">London based digital graphic designer at the Wellcome Trust. HTML, CSS and a bit of javascript. A more thorough description to come. This is work in progress. </p>
+            <p>
+              <ul class="site-info__links">
+                <li><a href="http://twitter.com/jackcraig" >Twitter</a></li>
+                <li><a href="http://instagram.com/jackcraig" >Instagram</a></li>
+                <li><a href="https://github.com/jackcraig" >Github</a></li>
+              </ul>
+            </p>
           </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Home</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
         </header>
-      </div>
-    </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
+      <div role="main" class="main">
+        {{ content }}
+      </div>
     </div>
 
     {% include analytics.html %}

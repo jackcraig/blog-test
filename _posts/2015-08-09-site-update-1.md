@@ -1,0 +1,7 @@
+---
+layout: post
+title: Site update <small>&num;</small>1
+tags:
+---
+
+I've made my first update to the design of the site since moving it to Jekyll. Before it was, pretty much, raw unstyled HTML. The update is a light touch and it's just the start of the process. I will continue to add and change it over time. I've introduced the typeface [Freight Sans](https://typekit.com/fonts/freight-sans-pro) which is functional and soft and looks great in <span class="alpha" >all caps with a bit of tracking</span>. However it's becoming quite ubiquitous so I may relent and change it later.  With the aim of making this update as swift as possible I've made headings and body copy all the same size. I like it but I'll probably have to rethink it later when the site needs more hierarchy.
