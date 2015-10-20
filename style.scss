@@ -22,12 +22,7 @@ html {
 body {
   font-family: $freight;
   color: $black;
-}
-
-.wrapper {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: $typecsset-magic-number;
+  background-color: #fff
 }
 
 h1, .alpha, h2, .beta, h3, .delta, h4, .gamma, h5, .epsilon, h6, .zeta {
@@ -36,7 +31,7 @@ h1, .alpha, h2, .beta, h3, .delta, h4, .gamma, h5, .epsilon, h6, .zeta {
 }
 
 small, .milli {
-  @include typecsset-font-size(14px);
+  @include typecsset-font-size(14px, 10px);
 }
 
 h1, .alpha {
@@ -87,6 +82,22 @@ strong, b {
   font-weight: 700;
 }
 
+figure {
+  margin: 0 0 $typecsset-magic-number 0;
+}
+
+figcaption {
+  color: $darkGrey;
+  @include typecsset-font-size(14px);
+  line-height: 1.5;
+}
+
+blockquote {
+  margin: 0;
+  padding-left: 2em;
+  border-left: 3px solid $grey;
+}
+
 img {
   max-width: 100%;
 }
@@ -114,9 +125,14 @@ img {
 /*********************/
 
 .wrapper {
-    margin-top: $typecsset-magic-number;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 0 $typecsset-magic-number;
+  margin-top: $typecsset-magic-number;
+  @include desktop {
+    margin-top: $typecsset-magic-number*2;
+  }
 }
-
 
 //
 // .masthead
@@ -125,9 +141,9 @@ img {
 .masthead {
   @include desktop {
     width: 200px;
-    float: left;
-    margin-right: $typecsset-magic-number;
-
+    position: fixed;
+    top: 0;
+    margin-top: $typecsset-magic-number*2;
   }
 }
 
@@ -155,8 +171,16 @@ img {
 //
 
 .main {
-  display: block;
-  overflow: auto;
+  @include desktop {
+    display: block;
+    overflow: auto;
+    float: right;
+    margin-left: 224px;
+  }
+}
+
+.post {
+  margin-bottom: $typecsset-magic-number;
 }
 
 .date {
