@@ -1,6 +1,16 @@
 ---
 ---
 
+$typecsset-base-font-size:      16px;
+$typecsset-base-line-height:    24px;
+$typecsset-h1-size:             16px !default;
+$typecsset-h2-size:             16px !default;
+$typecsset-h3-size:             16px !default;
+$typecsset-h4-size:             16px !default;
+$typecsset-h5-size:             16px !default;
+$typecsset-h6-size:             16px !default;
+
+
 //
 // IMPORTS
 //
@@ -16,19 +26,29 @@
 /**************/
 
 html {
-  font-size: 100%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
 }
 
 body {
   font-family: $freight;
   color: $black;
-  background-color: #fff
 }
 
 h1, .alpha, h2, .beta, h3, .delta, h4, .gamma, h5, .epsilon, h6, .zeta {
   font-weight: normal;
   font-weight: 700;
 }
+
+  p, h1, h2, h3, h4, h5, span, ul, ol, blockquote {
+    max-width: 560px;
+  }
+
 
 small, .milli {
   @include typecsset-font-size(14px, 10px);
@@ -39,24 +59,20 @@ h1, .alpha {
   letter-spacing: 1px;
 }
 
-h2 {
-
-}
-
 a {
   color: $black;
   text-decoration: none;
-  //border-bottom: 2px solid $lightGrey;
-  box-shadow: inset 0 -1px 0 $lightGrey;
+  border-bottom: 3px solid $lightGrey;
 
   &:hover, &:active {
     color: $black;
-    //border-bottom: 2px solid $grey;
-    box-shadow: inset 0 -1px 0 $grey;
+    border-bottom: 3px solid #b6f2ff;
   }
 }
 
 ul, ol {
+  margin-left: 40px;
+  max-width: 520px;
 }
 
 ul {
@@ -125,12 +141,13 @@ img {
 /*********************/
 
 .wrapper {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 $typecsset-magic-number;
+  max-width: 960px;
+  margin: 0 auto;  
   margin-top: $typecsset-magic-number;
+  padding: 0 20px; 
   @include desktop {
     margin-top: $typecsset-magic-number*2;
+    padding: 0;
   }
 }
 
@@ -140,10 +157,11 @@ img {
 
 .masthead {
   @include desktop {
-    width: 200px;
+    width: 260px;
     position: fixed;
     top: 0;
-    margin-top: $typecsset-magic-number*2;
+    padding: $typecsset-magic-number*2 0 0 40px;
+    height: 100%;
   }
 }
 
@@ -174,8 +192,14 @@ img {
   @include desktop {
     display: block;
     overflow: auto;
-    margin-left: 224px;
+    margin-left: 250px;
+    margin-right: 40px;
+    padding-left: $typecsset-magic-number;    
   }
+}
+
+.posts__headline {
+  margin-bottom: 0;
 }
 
 .post {
