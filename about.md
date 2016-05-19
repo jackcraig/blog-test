@@ -13,3 +13,5 @@ I currently work at [The Parliamentary Digital Service](https://pds.blog.parliam
 This site is a work in progress. 
 
 Feel free to get in touch on [Twitter](https://twitter.com/jackcraig).
+
+You can also find me on [Instagram](http://instagram.com/jackcraig) and [Github](https://github.com/jackcraig).
