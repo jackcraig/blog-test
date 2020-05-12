@@ -1,22 +1,12 @@
 ---
 ---
 
-$typecsset-base-font-size:      16px;
-$typecsset-base-line-height:    24px;
-$typecsset-h1-size:             16px !default;
-$typecsset-h2-size:             16px !default;
-$typecsset-h3-size:             16px !default;
-$typecsset-h4-size:             16px !default;
-$typecsset-h5-size:             16px !default;
-$typecsset-h6-size:             16px !default;
-
-
 //
 // IMPORTS
 //
 
-//@import "reset";
-@import "settings";
+// @import "reset";
+// @import "settings";
 @import "variables";
 
 // Syntax highlighting @import is at the bottom of this file
@@ -36,76 +26,36 @@ html {
 }
 
 body {
-  font-family: $freight;
+  font-family: $mono;
   color: $black;
-}
-
-h1, .alpha, h2, .beta, h3, .delta, h4, .gamma, h5, .epsilon, h6, .zeta {
-  font-weight: normal;
-  font-weight: 700;
-}
-
-  p, h1, h2, h3, h4, h5, span, ul, ol, blockquote {
-    max-width: 560px;
-  }
-
-
-small, .milli {
-  @include typecsset-font-size(14px, 10px);
-}
-
-h1, .alpha {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 a {
   color: $black;
-  text-decoration: none;
-  border-bottom: 3px solid $lightGrey;
-
-  &:hover, &:active {
-    color: $black;
-    border-bottom: 3px solid #b6f2ff;
-  }
 }
 
-ul, ol {
-  margin-left: 40px;
-  max-width: 520px;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 1em;
 }
 
-ul {
-  list-style-type: none;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ol ul, ul ol, ul ul, ol ol {
-}
-
-ul ul, ol ul {
-  list-style-type: none;
-}
-
-em, i {
-  font-style: italic;
+small, .milli {
 }
 
 strong, b {
-  font-weight: 700;
 }
 
 figure {
-  margin: 0 0 $typecsset-magic-number 0;
+  margin: 0;
 }
 
 figcaption {
+  // font-family: $georgia;
+  // font-style: italic;
   color: $darkGrey;
-  @include typecsset-font-size(14px);
-  line-height: 1.5;
+  font-size: 0.8em;
 }
 
 blockquote {
@@ -143,43 +93,9 @@ img {
 .wrapper {
   max-width: 960px;
   margin: 0 auto;  
-  margin-top: $typecsset-magic-number;
   padding: 0 20px; 
   @include desktop {
-    margin-top: $typecsset-magic-number*2;
     padding: 0;
-  }
-}
-
-//
-// .masthead
-//
-
-.masthead {
-  @include desktop {
-    width: 260px;
-    position: fixed;
-    top: 0;
-    padding: $typecsset-magic-number*2 0 0 40px;
-    height: 100%;
-  }
-}
-
-.site-info__title a {
-  text-decoration: none;
-  box-shadow: none;
-}
-
-.site-info__links {
-  margin: 0;
-  li {
-    list-style-type: none;
-    display: inline;
-    margin-right: 4px; 
-    @include desktop { 
-      margin: 0;
-      display: block;
-    }
   }
 }
 
@@ -194,7 +110,6 @@ img {
     overflow: auto;
     margin-left: 250px;
     margin-right: 40px;
-    padding-left: $typecsset-magic-number;    
   }
 }
 
@@ -203,15 +118,10 @@ img {
 }
 
 .post {
-  margin-bottom: $typecsset-magic-number;
 }
 
 .date {
-  @extend .milli;
   font-style: italic;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
+
