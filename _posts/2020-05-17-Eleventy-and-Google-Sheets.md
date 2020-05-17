@@ -1,0 +1,11 @@
+---
+layout: post
+title: Eleventy and Google Sheets
+tags:
+---
+
+I use Google Sheets a fair amount to catalogue stuff like my runs and reading lists. In recent years I’ve moved towards managing the data myself rather than using bespoke services as I’ve become sceptical of the ownership and longevity of these tools. [Last.fm](https://last.fm) removing years of users gig data is particularly memorable bad example (although credit to them they have rolled this back… at least for now). 
+
+So the possibility of using content from Google Sheets to power a website was attractive due to its low maintenance. I’ve seen examples of this implemented using the Google Sheets API and Javascript on the client side but that doesn’t sit easy with me from a progressive enhancement perspective. After some Googling I found this simple [CSS Tricks tutorial which manages it with a static site generator](https://css-tricks.com/creating-an-editable-site-with-google-sheets-and-eleventy) - Eleventy. I’ve been keen to try [Eleventy](https://www.11ty.dev/) for a while due to it being based on Javascript and so I gave it a go (this website is powered by another static site generator, [Jekyll](https://jekyllrb.com/), which is Ruby based).
+
+After a couple of weekends I generated a page which displays [trees I’ve catalogued in my local area](https://jackcraig.github.io/tree-notes/dist/) using content from my own Google Sheet and photos and their metadata I’ve uploaded to [Cloudinary](https://cloudinary.com/) (a digital asset management tool). Overall it was fairly straightforward. The trickiest bit was my limited knowledge of Eleventy and extending it to publish the image metadata. My Javascript skills are rusty to say the least and pre-date even [ES6](https://www.w3schools.com/js/js_es6.asp) so it was a bit of a bumpy ride however I did manage to wrangle it to retrieve and display the date from the image EXIF information. My next steps are to publish location and colours from the Cloudinary API but before all that I should probably find some time to properly get my head around Eleventy (and, of course, the interface needs a lick of paint). It was fun to dip my toe back into Javascript and I’m interested in the potential of using Eleventy, Google Sheets and Cloudinary to build other sites.
