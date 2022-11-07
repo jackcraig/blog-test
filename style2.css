@@ -20,7 +20,7 @@ html {
 
 body {
   font-family: infiniRegular;
-  padding: 2rem;
+  padding: 3rem 2rem 2rem 2rem;
   color: black;
   max-width: 600px;
 }
@@ -40,11 +40,13 @@ h2 {
 
 h1 {
   font-family: infiniBold;
-  margin: 1rem 0 3rem 0;
+  display: inline;
 }
 
-h1 span {
+span {
   font-family: infiniItalic;
+  line-height: 1.1;
+  font-size: 1.2rem;
 }
 
 p, li {
@@ -54,6 +56,8 @@ p, li {
 .date {
   font-family: infiniBold;
   display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 li {
@@ -66,7 +70,8 @@ ul {
 }
 
 hr {
-  border: 
+  margin-top: 3rem;
+  color: black;
 }
 
 .small {
@@ -78,12 +83,16 @@ a, a:visited {
   color: black;
 }
 
+header {
+  max-width: 420px;
+}
+
 @media only screen and (min-width: 500px) {
   html {
     font-size: 18px;
   }
   body {
-    padding: 4rem;
+    padding: 5rem 4rem 4rem 4rem;
   }
 }
 
