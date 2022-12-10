@@ -1,68 +1,52 @@
-@font-face {
-  font-family: infiniRegular;
-  src: url(https://cdn.glitch.global/b559143c-e769-4b13-a9ff-f89cf2ca7f96/infini-regular.woff?v=1646935324591);
-}
-
-@font-face {
-  font-family: infiniItalic;
-  src: url(https://cdn.glitch.global/b559143c-e769-4b13-a9ff-f89cf2ca7f96/infini-italic.woff?v=1646935327435);
-}
-
-@font-face {
-  font-family: infiniBold;
-  src: url(https://cdn.glitch.global/b559143c-e769-4b13-a9ff-f89cf2ca7f96/infini-bold.woff?v=1646935332245);
+:root {
+  --black: #1E1E1E;
+  --blue: #AAF0FF;
+  --white: #ffffff; 
 }
 
 html {
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 18px;
+  line-height: 1.5;
+  background: var(--black);
 }
 
 body {
-  font-family: infiniRegular;
-  padding: 3rem 2rem 2rem 2rem;
-  color: black;
-  max-width: 600px;
+  font-family: Helvetica, Arial;
+  padding: 2rem 1rem 1rem 1rem;
+  color: var(--white);
+  max-width: 960px;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: infiniRegular;
-  line-height: 1.1;
-  font-size: 1.2rem;
-  font-weight: normal;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
-h2 {
-  margin: 3rem 0 1rem 0;
-  font-family: infiniItalic;
-  font-size: 1rem;
+section ul {
+  max-width: 390px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+header {
+  max-width: 370px;
+}
+
+header p, h1 {
+  letter-spacing: 0px;
+  font-size: 1.1rem;
+}
+
+header p {
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1rem 0 2rem 0;
 }
 
 h1 {
-  font-family: infiniBold;
-  display: inline;
-}
-
-span {
-  font-family: infiniItalic;
-  line-height: 1.1;
-  font-size: 1.2rem;
-}
-
-p, li {
-  font-size: 1rem;
-}
-
-.date {
-  font-family: infiniBold;
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-li {
-  list-style: none;
-  margin: 0 0 1rem 0;
+  color: var(--blue);  
 }
 
 ul {
@@ -70,29 +54,92 @@ ul {
 }
 
 hr {
-  margin-top: 3rem;
-  color: black;
-}
-
-.small {
-  font-size: 28px;
-  max-width: 1000px;
+  margin-top: 0.2rem;
+  border-top: 1px solid var(--blue);
 }
 
 a, a:visited {
-  color: black;
+  color: var(--white);
 }
 
-header {
-  max-width: 480px;
+.grid {
+  display: block;
+  margin: 0 0 3rem 0;
+
 }
 
-@media only screen and (min-width: 500px) {
-  html {
-    font-size: 18px;
+p {
+  font-size: 0.8rem;
+}
+
+
+h2 {
+  font-size: 0.8rem;
+  padding-bottom: 0;
+}
+
+.date {
+  display: block;
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.org {
+  display: block;
+  font-weight: bold;
+}
+
+li {
+  font-size: 0.8rem;
+  list-style: none;
+  margin: 0 0 1rem 0;
+}
+
+
+@media only screen and (min-width: 500px) { 
+  header p, h1 {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
   }
   body {
-    padding: 5rem 4rem 4rem 4rem;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  header {
+    max-width: 560px;
+  }
+
+}
+
+@media only screen and (min-width: 660px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%; 
+  }
+  section {
+    margin-right: 2rem;
+  } 
+}
+
+
+@media only screen and (min-width: 860px) {
+
+  body {
+    padding: 4rem 4rem 4rem 4rem;
+  }
+  header {
+    max-width: 760px;
+  }
+  header p {
+    margin: 2rem 0 3rem 0;
+  }
+  header p, h1 {
+    font-size: 2.4rem;
   }
 }
+
+
+
+
+
+
 
